@@ -1,6 +1,6 @@
 const ROOT = new URL('./', self.location.href);
 const PREFIX = `sekta-${ROOT.pathname}-`;
-const CACHE = PREFIX + 'd712381bd28a7d20';
+const CACHE = PREFIX + '99b30314b2b0d8d1';
 const ASSETS = (["./apple-touch-icon.png","./assets/app.js","./assets/index.css","./icon-192.png","./icon-512.png","./icon.svg","./index.html","./instruction.html","./manifest.webmanifest","./sekta.png"]).map(path => new URL(path, ROOT).href);
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(async cache => { await cache.addAll(ASSETS); }));
